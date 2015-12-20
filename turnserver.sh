@@ -7,11 +7,11 @@ if [ ! -f "/external_ip" ]; then
   fi
 fi
 
-if [ ! -z "$TURN_CREDENTIALS" ]; then
+if [ -z "$TURN_CREDENTIALS" ]; then
     export TURN_CREDENTIALS=user:password
 fi
 
-if [ ! -z "$TURN_REALM" ]; then
+if [ -z "$TURN_REALM" ]; then
     export TURN_REALM=domain.org
 fi
 
